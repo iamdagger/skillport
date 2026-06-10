@@ -1,0 +1,21 @@
+[project]
+name = "skillport"
+version = "0.6.2"
+description = "Drop-in skills and presets for your coding agent"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "skillport contributors" }]
+dependencies = [
+    "skillport-presets @ git+https://github.com/iamdagger/skillport-presets.git@v0.2.1",
+]
+
+[project.scripts]
+skillport = "skillport.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["skillport"]
